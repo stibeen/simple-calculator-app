@@ -10,30 +10,33 @@
 <body>
     <h1>Calculator App</h1>
     <div id="container">
-        <input type="text" id="input-field" />
-        <p id="text-content"></p>
+        <input type="text" id="input-field" readonly/>
         <button id="calculate-btn">=</button>
-        <button id="open-parentheses-btn">(</button>
-        <button id="close-parentheses-btn">)</button>
+        <button onclick="charToAppend('(')">(</button>
+        <button onclick="charToAppend(')')">)</button>
         <div id="numbers">
-            <button id="button-one">1</button>
-            <button id="button-two">2</button>
-            <button id="button-three">3</button>
-            <button id="button-four">4</button>
-            <button id="button-five">5</button>
-            <button id="button-six">6</button>
-            <button id="button-seven">7</button>
-            <button id="button-eight">8</button>
-            <button id="button-nine">9</button>
-            <button id="button-zero">0</button>
+            <button onclick="charToAppend('1')">1</button>
+            <button onclick="charToAppend('2')">2</button>
+            <button onclick="charToAppend('3')">3</button>
+            <button onclick="charToAppend('4')">4</button>
+            <button onclick="charToAppend('5')">5</button>
+            <button onclick="charToAppend('6')">6</button>
+            <button onclick="charToAppend('7')">7</button>
+            <button onclick="charToAppend('8')">8</button>
+            <button onclick="charToAppend('9')">9</button>
+            <button onclick="charToAppend('0')">0</button>
         </div>
         <button id="button-clear">Clear</button>
         <button id="button-delete">Delete</button>
         <div id="operators">
-            <button id="button-add">+</button>
-            <button id="button-subtract">-</button>
-            <button id="button-multiply">*</button>
-            <button id="button-divide">/</button>
+            <button onclick="charToAppend('+')">+</button>
+            <button onclick="charToAppend('-')">-</button>
+            <button onclick="charToAppend('*')">*</button>
+            <button onclick="charToAppend('/')">/</button>
+        </div>
+        <div>
+            <h2>History</h1> <button id="clear-history-btn">Clear history</button>
+            <ul id="history-list"></ul>
         </div>
     </div>
 </body>
