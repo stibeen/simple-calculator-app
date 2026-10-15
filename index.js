@@ -21,9 +21,9 @@ const deleteChar = () => {
     inputField.value = deleteLastChar;
 }
 
-calculateBtn.addEventListener("click", () => {
+const calculate = () => {
     expression = inputField.value
-    if(!!eval(expression)){
+    if(!!eval(expression) || !0){
         answer = eval(expression);
         inputField.value = answer
         previousCalcs.push({expression: `${expression}`, answer: `${answer}`})
@@ -33,7 +33,7 @@ calculateBtn.addEventListener("click", () => {
         listItem.textContent = `${expression} = ${answer}`;
         listContainer.appendChild(listItem);
     } 
-})
+}
 
 clearHistory.addEventListener("click", () => {
     listContainer.replaceChildren();
