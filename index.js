@@ -1,8 +1,6 @@
 const inputField = document.getElementById('input-field');
 const calculateBtn = document.getElementById('calculate-btn');
 
-const buttonDelete = document.getElementById('button-delete');
-
 const listContainer = document.getElementById('history-list');
 
 const clearHistory = document.getElementById('clear-history-btn');
@@ -17,11 +15,11 @@ const charToAppend = (char) => {
 
 const clearDisplay = () => inputField.value = ""
 
-buttonDelete.addEventListener("click",() => {
+const deleteChar = () => {
     let inputString = inputField.value.toString()
     let deleteLastChar = inputString.substring(0,inputField.value.length - 1)
     inputField.value = deleteLastChar;
-})
+}
 
 calculateBtn.addEventListener("click", () => {
     expression = inputField.value
