@@ -1,11 +1,7 @@
 const inputField = document.getElementById('input-field');
-const calculateBtn = document.getElementById('calculate-btn');
-
 const listContainer = document.getElementById('history-list');
 
-const clearHistory = document.getElementById('clear-history-btn');
 let previousCalcs = []; 
-
 let expression = null;
 let answer = 0;
 
@@ -35,8 +31,8 @@ const calculate = () => {
     } 
 }
 
-clearHistory.addEventListener("click", () => {
+const clearHistory = () => {
     listContainer.replaceChildren();
     previousCalcs.length = 0;
     console.log(previousCalcs);
-})
+}
