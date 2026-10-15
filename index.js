@@ -1,7 +1,6 @@
 const inputField = document.getElementById('input-field');
 const calculateBtn = document.getElementById('calculate-btn');
 
-const buttonClear = document.getElementById('button-clear');
 const buttonDelete = document.getElementById('button-delete');
 
 const listContainer = document.getElementById('history-list');
@@ -16,7 +15,7 @@ const charToAppend = (char) => {
     inputField.value += char
 }
 
-buttonClear.addEventListener("click", () => inputField.value = "")
+const clearDisplay = () => inputField.value = ""
 
 buttonDelete.addEventListener("click",() => {
     let inputString = inputField.value.toString()
