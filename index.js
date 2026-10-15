@@ -2,8 +2,6 @@ const inputField = document.getElementById('input-field');
 const listContainer = document.getElementById('history-list');
 
 let previousCalcs = []; 
-let expression = null;
-let answer = 0;
 
 const charToAppend = (char) => {
     inputField.value += char
@@ -18,9 +16,9 @@ const deleteChar = () => {
 }
 
 const calculate = () => {
-    expression = inputField.value
+    let expression = inputField.value
     if(!!eval(expression) || !0){
-        answer = eval(expression);
+        let answer = eval(expression);
         inputField.value = answer
         previousCalcs.push({expression: `${expression}`, answer: `${answer}`})
         console.log(previousCalcs);
